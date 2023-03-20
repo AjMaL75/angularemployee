@@ -1,0 +1,4 @@
+.bg-primary:empty{
+    display: none;
+    background-color: black;
+}

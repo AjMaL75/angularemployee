@@ -1,0 +1,26 @@
+
+<div class="">
+  <h2 class="text-center">Employee seva </h2>
+  <div class="  rounded ms-5">
+    <div class="row  ">
+      <div class="mx-auto col-10 col-md-8 col-lg-6 ">
+        <form action="" class="bg-light p-5 rounded w-75 text-center" [formGroup]="addForm">
+          <h3 class="text-center">Login </h3>
+            <input  formControlName="empname" type="text" class="form-control mt-3" placeholder="Enter employee name  " id="en1" name="ename">
+            <div class="text-danger text-start" *ngIf="this.addForm.get('empname')?.errors &&this.addForm.get('empname')?.touched">characters only</div>
+            <input formControlName="empid" type="text"class="form-control mt-3" placeholder="Enter employee id  " id="eid" name="emid">
+            <div class="text-danger text-start" *ngIf="this.addForm.get('empid')?.errors &&this.addForm.get('empid')?.touched">Numbers only</div>
+            <input formControlName="empdesig" type="text"class="form-control mt-3" placeholder="Designation  " id="des" name="edes">
+            <div class="text-danger text-start" *ngIf="this.addForm.get('empdesig')?.errors &&this.addForm.get('empdesig')?.touched">characters only</div>
+            <input formControlName="empsal" type="text"class="form-control mt-3" placeholder="salary  " id="sal" name="esal">
+            <div class="text-danger text-start" *ngIf="this.addForm.get('empsal')?.errors &&this.addForm.get('empsal')?.touched">Numbers only</div>
+            <input formControlName="empexp" type="text"class="form-control mt-3" placeholder="experience " id="exp" name="eexp">
+            <div class="text-danger text-start" *ngIf="this.addForm.get('empexp')?.errors &&this.addForm.get('empexp')?.touched">Numbers only</div>
+            <button class="btn btn-info text-center mt-3" (click)=" addData()">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

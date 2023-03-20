@@ -1,0 +1,18 @@
+<div class="container w-50 bg-light text-center p-5 mt-5 text-white"style="border-radius: 20px;">
+    <h1 class="mt-3 text-center text-danger">Employee Search</h1>
+    <form [formGroup]="searchForm">
+        <input formControlName="sear" type="text" class="form-control " placeholder="Enter Employee id" id="search" name="empsearch">
+        <div class="text-danger text-start" *ngIf="this.searchForm.get('sear')?.errors &&this.searchForm.get('empname')?.touched">Numbers only</div>
+        <button class="mt-3 btn btn-info" type="button" (click)="search()">Search</button>
+    </form >
+    <div class="bg-secondary container-fluid mt-5" style="border-radius: 30px;" id="dis"></div>
+   <div class="bg-primary rounded  container-fluid" ng-if="info.ID"> employee name is:{{finalresult.empname}} <br>
+    employee id  is:{{finalresult.empid}} <br>
+    employee Designation  is:{{finalresult.empdesig}} <br>
+    employee salary  is:{{finalresult.empsal}}  <br>
+    employee experience  is:{{finalresult.empexp}} 
+
+    
+   </div>
+   <button class="float-center btn btn-info mt-3" ><a routerLink="" class="text-white" style="text-decoration: none;">Goto Add</a></button>
+</div>
